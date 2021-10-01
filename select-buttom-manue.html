@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/ac9dc5d09c.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        .bottom-nav-items {
+            display: flex;
+            justify-content: space-around;
+            height: 36px;
+            position: relative;
+        }
+
+        .item-icon {
+            font-size: 30px;
+            color: rebeccapurple;
+        }
+
+        .bottom-nav-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+        }
+
+        .item-text {
+            font-size: 20;
+            padding-top: 10px;
+        }
+
+        .bottom-nav-item {
+            width: 40px;
+            position: relative;
+        }
+
+        .icon-message-container {
+            width: 100%;
+            top: 0;
+            transition: top .3s;
+        }
+
+        .bottom-nav-item.bottom-nav-item-active .icon-message-container {
+            position: absolute;
+            top: -34px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bottom-nav-container">
+        <div class="bottom-nav-items">
+            <div class="bottom-nav-item">
+                <div class="icon-message-container">
+                    <div class="item-icon">
+                        <img src="images/Cart bottom.svg" alt="" class="bottom-header-icons" />
+                    </div>
+                    <div class="item-text">
+                       Cart
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-nav-item">
+                <div class="icon-message-container">
+                    <div class="item-icon">
+                        <img src="images/Cart bottom.svg" alt="" class="bottom-header-icons" />
+
+                    </div>
+                    <div class="item-text">
+                        Cart
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom-nav-item bottom-nav-item-active">
+                <div class="icon-message-container">
+                    <div class="item-icon">
+                        <img src="images/Cart bottom.svg" alt="" class="bottom-header-icons" />
+
+                    </div>
+                    <div class="item-text">
+                        Cart
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom-nav-item">
+                <div class="icon-message-container">
+                    <div class="item-icon">
+                        <img src="images/Cart bottom.svg" alt="" class="bottom-header-icons" />
+
+                    </div>
+                    <div class="item-text">
+                        Cart
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom-nav-item">
+                <div class="icon-message-container">
+                    <div class="item-icon">
+                        <img src="images/Cart bottom.svg" alt="" class="bottom-header-icons" />
+
+                    </div>
+                    <div class="item-text">
+                        Cart
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        document.querySelectorAll(".bottom-nav-item").forEach(function (el, index) {
+            el.addEventListener("click", function (el1) {
+                console.log(index);
+                removeAllactiveClass();
+                document.querySelectorAll(".bottom-nav-item")[index].className += " bottom-nav-item-active";
+            });
+        });
+
+        var removeAllactiveClass = function removeAllactiveClass() {
+            document.querySelectorAll(".bottom-nav-item").forEach(function (el, index) {
+                el.classList.remove("bottom-nav-item-active");
+            });
+        };
+    </script>
+
+</body>
+
+<script type="text/javascript" src="index.js"></script>
+
+</html>

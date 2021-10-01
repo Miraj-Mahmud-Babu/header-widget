@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="order.css">
+
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.order-status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-position {
+    max-width: 414px;
+}
+
+.order-main-content {
+    background-color: #F1F5FF;
+    padding: 40px 21px 40px 30px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.main-content-header {
+    font-weight: bold;
+    font-size: 18px;
+    color: #01126C;
+    margin-bottom: 32px;
+}
+
+.item-bold-content {
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+.item-regular-content {
+    font-size: 12px;
+    color: #95AFC0;
+    line-height: 22px;
+    padding-bottom: 25px;
+}
+
+.topheader-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #01126C;
+    text-align: center;
+}
+
+.top-header {
+    display: flex;
+    padding: 0 20px;
+}
+
+.top-header {
+    display: flex;
+    padding: 20px 20px;
+}
+
+.arrow-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 119px;
+}
+
+img.arrow-icon-image {
+    display: flex;
+    align-items: center;
+}
+
+.main-content-items {
+    padding-left: 15px;
+}
+
+.list-items {
+    display: flex;
+    border-left: 1px solid #dee7f2;
+    position: relative;
+}
+
+.items-icon {
+    position: absolute;
+    left: -7px;
+    top: 0px;
+}
+
+.list-item-design {
+    display: flex;
+}
+
+.list-item-content {
+    margin-left: 45px;
+}
+
+.container-list-items input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: -3px;
+    height: 20px;
+    width: 20px;
+    background-color: #f1f5ff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+}
+
+.container-list-items:hover input~.checkmark {
+    background-color: #f1f5ff;
+    border-radius: 50%;
+}
+
+.container-list-items input:checked~.checkmark {
+    background-color: #2ECC71;
+    border-radius: 50%;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container-list-items input:checked~.checkmark:after {
+    display: block;
+}
+
+.container-list-items .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 4px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+    </style>
+</head>
+
+<body>
+
+    <section class="order-status">
+        <div class="order-status-container">
+            <div class="container-position">
+                <div class="order-content">
+                    <div class="top-header">
+                        <div class="arrow-icon">
+                            <img src="order/fi-rr-angle-small-left.png" alt="" class="arrow-icon-image">
+                        </div>
+
+                        <div class="topheader-title">
+                            Order Status
+                        </div>
+                    </div>
+
+
+                    <div class="order-main-content">
+                        <div class="main-content-header">
+                            ORDER #21412
+                        </div>
+
+                        <div class="main-content-items">  
+                            <div class="list-items">
+                              <div class="list-item-design">
+                                <div class="items-icon">
+                                    <label class="container-list-items">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                </div>
+                                <div class="list-item-content">
+                                    <div class="item-bold-content">Order Placed</div>
+                                    <div class="item-regular-content">Your order #21412 was placed on 23th January 2021.
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                           
+                            <div class="list-items">
+                              <div class="list-item-design">
+                                <div class="items-icon">
+                                    <label class="container-list-items">
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                </div>
+                                <div class="list-item-content">
+                                    <div class="item-bold-content">Processing</div>
+                                    <div class="item-regular-content">Your order still needs to be processed by our store before sending it to you.
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                           
+
+                           
+                            <div class="list-items">
+                              <div class="list-item-design">
+                                <div class="items-icon">
+                                    <label class="container-list-items">
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                </div>
+                                <div class="list-item-content">
+                                    <div class="item-bold-content">Order Placed</div>
+                                    <div class="item-regular-content">Your order #21412 was placed on 23th January 2021.
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                           
+
+                           
+                            <div class="list-items">
+                              <div class="list-item-design">
+                                <div class="items-icon">
+                                    <label class="container-list-items">
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                </div>
+                                <div class="list-item-content">
+                                    <div class="item-bold-content">Order Placed</div>
+                                    <div class="item-regular-content">Your order #21412 was placed on 23th January 2021.
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                           
+
+                           
+                            <div class="list-items">
+                              <div class="list-item-design">
+                                <div class="items-icon">
+                                    <label class="container-list-items">
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                </div>
+                                <div class="list-item-content">
+                                    <div class="item-bold-content">Order Placed</div>
+                                    <div class="item-regular-content">Your order #21412 was placed on 23th January 2021.
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                           
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
